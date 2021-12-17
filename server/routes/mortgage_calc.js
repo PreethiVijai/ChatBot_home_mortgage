@@ -10,6 +10,6 @@ router.get('/mortgage/:downPayment/:monthlyPayment', function (req, res) {
     var data = {
         "HomePrice" : req.params.downPayment * req.params.monthlyPayment
     }
-    res.send(data);
+    res.send(req.params.downPayment * req.params.monthlyPayment);
 });
 module.exports = router;
