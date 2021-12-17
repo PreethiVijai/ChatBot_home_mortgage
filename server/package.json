@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for Chatbot",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "http-status-codes": "^2.1.4"
+  }
+}
