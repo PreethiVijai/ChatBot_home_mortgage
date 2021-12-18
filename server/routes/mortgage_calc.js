@@ -24,7 +24,7 @@ router.get('/mortgage/statistic/:state/:city',function(req,res){
     var inputState = req.params.state.toLowerCase();
     var inputCity = req.params.city.toLowerCase();
     var output_statistics = "State and city statistical data do not exst on the database";
-fs.createReadStream('../data_list.csv')
+fs.createReadStream('./data_list.csv')
     .pipe(parse({delimiter: ':'}))
     .on('data', function(csvrow) {
 
