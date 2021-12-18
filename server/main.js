@@ -1,9 +1,13 @@
-var express = require('express');
+import express from 'express';
+
 var app = express();
-const calculation = require('./routes/mortgage_calc')
-app.use('/',calculation)
-app.use('/mortgage',calculation)
-app.use('/mortgage/:downPayment/:monthlyPayment',calculation)
-app.listen(process.env.PORT || 8000, function () {
+import router from './routes/mortgage_calc.js'
+
+app.use('/',router)
+app.use('/mortgage',router)
+app.use('/mortgage/:downPayment/:monthlyPayment',router)
+app.listen(8000, function () {
   console.log('Server started successfully');
 });
+
+//process.env.PORT || 
