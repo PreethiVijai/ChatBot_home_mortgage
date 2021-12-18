@@ -17,7 +17,7 @@ router.get('/mortgage/:downPayment/:monthlyPayment', function (req, res) {
     var data = {
         "HomePrice" : homePrice
     }
-    res.send(data);
+    res.send(homePrice.toString());
 });
 
 router.get('/mortgage/statistic/:state/:city',function(req,res){
